@@ -57,11 +57,9 @@ def main():
 
             # Plot the decision tree
             try:
-                class_names = [str(c) for c in sorted(y.unique())]
-                plt.figure(figsize=(8, 6))
-                plot_tree(clf, feature_names=[selected_feature], class_names=class_names, filled=True, rounded=True)
-                st.pyplot()
-            except IndexError as e:
+                st.write("Decision Tree:")
+                plot_tree(clf, feature_names=[selected_feature], class_names=clf.classes_, filled=True)
+            except Exception as e:
                 st.error("Error occurred while plotting the decision tree:", e)
 
 if __name__ == "__main__":
