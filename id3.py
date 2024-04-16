@@ -2,7 +2,6 @@ import pandas as pd
 import math
 import streamlit as st
 from sklearn.tree import DecisionTreeClassifier, plot_tree
-import matplotlib.pyplot as plt
 
 # Function to calculate entropy
 def calculate_entropy(data, target_column):
