@@ -1,9 +1,8 @@
 import numpy as np
 import streamlit as st
 
-class NeuralNetwork():
-    
-    def _init_(self):
+class NeuralNetwork:
+    def __init__(self):
         # seeding for random number generation
         np.random.seed(1)
         
@@ -19,7 +18,6 @@ class NeuralNetwork():
         return x * (1 - x)
 
     def train(self, training_inputs, training_outputs, training_iterations):
-        
         # training the model to make accurate predictions while adjusting weights continually
         for iteration in range(training_iterations):
             # siphon the training data via the neuron
